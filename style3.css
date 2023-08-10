@@ -1,0 +1,83 @@
+@media screen and (max-width: 660px) {
+    .page {
+        height: 1360px;
+        width: 100%;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh; 
+    }
+    
+    .header {
+        display: flex;
+        justify-content: center;
+        /* height: 20%; */
+        margin-top: -20px;
+    }
+    
+    .title {
+        line-height: 100px;
+        font-size: 3rem;
+    }
+    
+    .quote-container {
+        background-color: rgba(255,255,255, 30%);
+        width: 90%;
+        height: auto;
+        margin-top: -10px;
+        /* margin: 10px 0px; */
+        border-radius: 30px;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .quote-text {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px 30px 5px 30px;
+        font-family: 'Ysabeau Office', sans-serif;
+        font-weight: 200;
+        line-height: 30px;
+        /* font-style: italic; */
+        color: black;
+        /* border: 1px solid white; */
+    }
+    
+    #quote {
+        font-size: 1.5rem;
+    }
+    
+    .quote-author {
+        text-align: left;
+        margin: 15px 30px;
+        font-size: 1rem;
+        font-family: 'Ysabeau Office', sans-serif;
+        font-weight: 100;
+        /* font-style: italic; */
+        color: black;
+        /* border: 1px solid white; */
+    }
+    
+    .button-container {
+        margin: 30px 50px 20px 50px;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid white; */
+    }
+    
+    .button-content {
+        height: 30px;
+        width: 90px;
+        font-size: 0.8rem;
+        border-radius: 10px;
+        border: none;
+        background-color: rgba(255,255,255, 30%);
+    }
+    
+    .long-quote {
+        font-size: 2rem;
+    }
+}

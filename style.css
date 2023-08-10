@@ -1,6 +1,5 @@
-/* * {
-    border: 1px solid black;
-} */
+
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
 
 html {
@@ -9,96 +8,102 @@ html {
   
   
 body {
-    background-image: linear-gradient(45deg, #3e3e3e, #f0f0f0);
+    /* background-image: linear-gradient(45deg, #3e3e3e, #f0f0f0); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover; /* 調整背景圖片寬度為原始大小的 50%，高度自動調整 */
     width: 100%;
     height: 100%;
+    background: rgb(194,255,159);
+    background: linear-gradient(45deg, rgba(194,255,159,1) 0%, rgba(0,212,255,1) 100%);
+    
 }
 
 .page {
-    position: relative;
-    width: 100%;
     height: 1360px;
+    width: 100%;
+    /* display: flex;
+    flex-direction: column;  */
+    border: 1px solid white;
     display: flex;
-    flex-direction: column; 
-    /* justify-content: space-between;  */
-    /* align-items: flex-start; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh; /* 设置容器高度为视窗的100% */
 }
 
 .header {
     display: flex;
-    justify-content: left;
-    align-items: center;
-    margin: 50px;
-}
-
-.half-circle {
-    width: 3rem; 
-    height: 1.5rem; 
-    background-color: #000000; 
-    border-top-left-radius: 50px; 
-    border-top-right-radius: 50px; 
-    margin: 20px;
+    justify-content: center;
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 9rem;
+    /* font-size: 10rem; */
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    color: white;
+    letter-spacing: -2px;
+    text-align: center;
 }
 
-
-
 .quote-container {
-    background-color: #e5e5e5;
-    justify-self: center;
+    background-color: rgba(255,255,255, 30%);
     width: 800px;
     height: auto;
-    align-self: center;
+    margin: 10px 0px;
     border-radius: 30px;
-    margin-top: 100px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
 }
 
 .quote-text {
     display: flex;
-    /* flex-direction: column;  */
-    /* justify-content: space-between;  */
     align-items: flex-start;
-    margin: 30px 50px 30px 50px;
-    /* margin: 50px; */
-    /* align-items: center; */
-}
-
-.circle {
-    /* width: 3rem;  */
-    width: 48px;
-    /* height: 2rem;  */
-    aspect-ratio: 1/1;
-    background-color: #000000; 
-    border-radius: 50%;
-    margin: 20px;
-    vertical-align: middle;
+    margin: 40px 50px 5px 50px;
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: 200;
+    line-height: 45px;
+    /* font-style: italic; */
+    color: black;
+    /* border: 1px solid white; */
 }
 
 #quote {
     font-size: 2.5rem;
-    /* line-height: 3rem; */
 }
 
 .quote-author {
-    text-align: right;
-    margin: 30px 50px;
-    font-size: 1.5rem;
+    text-align: left;
+    margin: 15px 50px;
+    font-size: 1.3rem;
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: 100;
+    /* font-style: italic; */
+    color: black;
+    /* border: 1px solid white; */
 }
 
 .button-container {
-    margin: 20px;
+    margin: 30px 50px 20px 50px;
     display: flex;
     justify-content: center;
+    /* border: 1px solid white; */
 }
 
-#new-quote {
+.button-content {
+    height: 40px;
+    width: 120px;
     font-size: 1rem;
+    border-radius: 10px;
+    /* border: none; */
+    background-color: rgba(255,255,255, 30%);
+}
+
+.button-content:active {
+    background-color: rgba(255,255,255, 80%);
 }
 
 .long-quote {
@@ -132,43 +137,3 @@ body {
 } */
 
 
-@media screen and (max-width: 500px) {
-    .header {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        margin: 10px 20px;
-    }
-
-    .half-circle {
-        margin: auto 5px;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
-
-    .quote-container {
-        background-color: #e5e5e5;
-        justify-self: center;
-        width: 90%;
-        /* height: auto; */
-        align-self: center;
-        border-radius: 15px;
-        /* margin-top: 50px; */
-        margin: 10px;
-    }
-
-
-
-    #quote {
-        font-size: 1.5rem;
-        margin: 5px;
-
-    }
-
-    #author {
-        font-size: 1.2rem;
-        margin: 5px;
-    }
-}
