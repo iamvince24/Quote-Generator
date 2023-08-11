@@ -1,7 +1,7 @@
 const quoteContainer = document.getElementById('quote-container');
 const quoteContent = document.getElementById('quote');
 const authorContent = document.getElementById('author');
-const newQuoteBtn = document.getElementById('new-quote');
+const newQuoteBtn = document.getElementById('button-content');
 const loader = document.getElementById('loader');
 
 
@@ -52,4 +52,4 @@ async function getQuote(){
 
 getQuote();
 
-newQuoteBtn.addEventListener('click', getQuote)
+newQuoteBtn.addEventListener('click', getQuote);
