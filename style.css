@@ -1,139 +1,242 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-  
-  
+
 body {
-    /* background-image: linear-gradient(45deg, #3e3e3e, #f0f0f0); */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; /* 調整背景圖片寬度為原始大小的 50%，高度自動調整 */
-    width: 100%;
-    height: 100%;
-    background: rgb(194,255,159);
-    background: linear-gradient(45deg, rgba(194,255,159,1) 0%, rgba(0,212,255,1) 100%);
-    
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background: rgb(194, 255, 159);
+  background: linear-gradient(
+    45deg,
+    rgba(194, 255, 159, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 .page {
-    height: 1360px;
-    width: 100%;
-    /* display: flex;
-    flex-direction: column;  */
-    /* border: 1px solid white; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh; /* 设置容器高度为视窗的100% */
+  height: 1360px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .title {
-    font-size: 9rem;
-    /* font-size: 10rem; */
-    font-family: 'Ysabeau Office', sans-serif;
-    font-weight: 100;
-    font-style: italic;
-    color: white;
-    letter-spacing: -2px;
-    text-align: center;
+  font-size: 9rem;
+  /* font-size: 10rem; */
+  font-family: "Ysabeau Office", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  color: white;
+  letter-spacing: -2px;
+  text-align: center;
 }
 
 .quote-container {
-    background-color: rgba(255,255,255, 30%);
-    width: 800px;
-    height: auto;
-    margin: 10px 0px;
-    border-radius: 30px;
-    border: 1px solid white;
-    display: flex;
-    flex-direction: column;
+  background-color: rgba(255, 255, 255, 30%);
+  width: 800px;
+  height: auto;
+  margin: 10px 0px;
+  border-radius: 30px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
 }
 
 .quote-text {
-    display: flex;
-    align-items: flex-start;
-    margin: 40px 50px 5px 50px;
-    font-family: 'Ysabeau Office', sans-serif;
-    font-weight: 200;
-    line-height: 45px;
-    /* font-style: italic; */
-    color: black;
-    /* border: 1px solid white; */
+  display: flex;
+  align-items: flex-start;
+  margin: 40px 50px 5px 50px;
+  font-family: "Ysabeau Office", sans-serif;
+  font-weight: 200;
+  line-height: 45px;
+  color: black;
 }
 
 #quote {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
+}
+
+.long-quote {
+  font-size: 2rem;
 }
 
 .quote-author {
-    text-align: left;
-    margin: 15px 50px;
-    font-size: 1.3rem;
-    font-family: 'Ysabeau Office', sans-serif;
-    font-weight: 100;
-    /* font-style: italic; */
-    color: black;
-    /* border: 1px solid white; */
+  text-align: left;
+  margin: 15px 50px;
+  font-size: 1.3rem;
+  font-family: "Ysabeau Office", sans-serif;
+  font-weight: 100;
+  color: black;
 }
 
 .button-container {
-    margin: 30px 50px 20px 50px;
-    display: flex;
-    justify-content: center;
-    /* border: 1px solid white; */
+  margin: 30px 50px 25px 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.button-content {
+button {
+  height: 2.5rem;
+  /* width: 120x; */
+  font-size: 1rem;
+  font-weight: 200;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 30%);
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+button:hover {
+  color: #38a1f3;
+}
+
+#new-quote {
+  width: 7.5rem;
+}
+
+/* Loader */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #333;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+.twitter-button {
+  cursor: pointer;
+  font-size: 1rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 30%);
+  outline: none;
+  /* padding: 0.5rem 1.8rem; */
+  width: 10rem;
+}
+
+@media screen and (max-width: 930px) {
+  .title {
+    line-height: 140px;
+  }
+
+  .quote-container {
+    width: 85%;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+
+  #new-quote {
     height: 40px;
     width: 120px;
     font-size: 1rem;
     border-radius: 10px;
     border: none;
-    background-color: rgba(255,255,255, 30%);
-}
+    background-color: rgba(255, 255, 255, 30%);
+  }
 
-.button-content:active {
-    background-color: rgba(255,255,255, 80%);
-}
-
-.long-quote {
+  .long-quote {
     font-size: 2rem;
+  }
 }
 
-/* Loader */
-.loader {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #333;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
+@media screen and (max-width: 660px) {
+  .title {
+    line-height: 120px;
+    font-size: 7rem;
+  }
 }
 
-/* @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-} */
-  
-/* Media Query: Tablet or Smaller */
-/* @media screen and (max-width: 1000px) {
-    .quote-container {
-        margin: auto 10px;
-    }
+@media screen and (max-width: 530px) {
+  .title {
+    line-height: 100px;
+    font-size: 3rem;
+  }
 
-    .quote-text {
-        font-size: 2.5rem;
-    }
-} */
+  .quote-container {
+    background-color: rgba(255, 255, 255, 30%);
+    width: 90%;
+    height: auto;
+    margin-top: -10px;
+    /* margin: 10px 0px; */
+    border-radius: 30px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .quote-text {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 30px 5px 30px;
+    font-family: "Ysabeau Office", sans-serif;
+    font-weight: 200;
+    line-height: 30px;
+    /* font-style: italic; */
+    color: black;
+    /* border: 1px solid white; */
+  }
 
+  #quote {
+    font-size: 1.5rem;
+  }
+
+  .quote-author {
+    /* text-align: left; */
+    margin: 15px 30px;
+    font-size: 1rem;
+    /* font-family: "Ysabeau Office", sans-serif; */
+    font-weight: 100;
+    /* font-style: italic; */
+    color: black;
+    /* border: 1px solid white; */
+  }
+
+  .long-quote {
+    font-size: 1.2rem;
+  }
+
+  .button-container {
+    margin: 20px 30px 25px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    font-size: 0.5rem;
+  }
+
+  #new-quote {
+    width: 5.5rem;
+    font-size: 0.7rem;
+  }
+
+  .twitter-button {
+    font-size: 0.7rem;
+    width: 7rem;
+  }
+}
